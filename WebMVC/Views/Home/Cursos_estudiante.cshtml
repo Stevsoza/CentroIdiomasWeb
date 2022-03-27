@@ -1,0 +1,41 @@
+﻿@model IEnumerable<CursoEstudiante>
+
+@if (Model.Count() > 0)
+{
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(m => m.Id_estudiante)</th>
+                <th>@Html.DisplayNameFor(m => m.Id_curso)</th>
+                <th>@Html.DisplayNameFor(m => m.Estado)</th>
+                <th>@Html.DisplayNameFor(m => m.Fecha_inicio)</th>
+                <th>@Html.DisplayNameFor(m => m.Fecha_final)</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        @foreach (var i in Model)
+        {
+            <tr class="m-3">
+                <td>@i.Id_estudiante</td>
+                <td>@i.Id_curso</td>
+                <td>@i.Estado</td>
+                <td>@i.Fecha_inicio.ToString("MM/dd/yyyy")</td>
+                <td>@i.Fecha_final.ToString("MM/dd/yyyy")</td>
+                <th>
+                    <a asp-controller="CursosEstudiante" asp-action="Edit"
+                       asp-route-id="@i.Id_estudiante" class="btn btn-primary">Modificar</a>
+                </th>
+                <th>
+                    <a asp-controller="CursosEstudiante" asp-action="Delete"
+                       asp-route-id="@i.Id_estudiante" class="btn btn-primary">Eliminar</a>
+                </th>
+            </tr>
+
+        }
+    </table>
+}
+else
+{
+    <p>No tiene Cursos Matriculados</p>
+}

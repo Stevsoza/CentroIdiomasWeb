@@ -1,0 +1,33 @@
+﻿@model Curso
+@{ 
+    ViewData["title"] = "Curso Matricular";
+}
+
+@if (Model.Id_curso > 0){
+    <table id="tablaCurso" class="table table-striped text-white">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(m => m.Nombre_Curso)</th>
+                <th>@Html.DisplayNameFor(m => m.Horas)</th>
+                <th>@Html.DisplayNameFor(m => m.Costo)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="m-3">
+                <td>@Html.DisplayFor(m => m.Nombre_Curso)</td>
+                <td>@Html.DisplayFor(m => m.Horas)</td>
+                <td>@Html.DisplayFor(m => m.Costo)</td>
+            </tr>
+        </tbody>
+    </table>}
+else
+{
+     <div class="text-center text-white">
+        <p>No hay registros</p>
+    </div>
+}
+@section Scripts{
+    @{
+        <script src="~/js/IdiomasJscript.js"></script>
+    }
+}

@@ -1,0 +1,124 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Steven\\Desktop\\ProyectoCentroIdiomas\\CentroIdiomas\\Capa_3_AccesoDatos\\Capa_3_AccesoDatos.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Steven\\Desktop\\ProyectoCentroIdiomas\\CentroIdiomas\\Capa_3_AccesoDatos\\Capa_3_AccesoDatos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Steven\\Desktop\\ProyectoCentroIdiomas\\CentroIdiomas\\Capa_3_AccesoDatos\\Capa_3_AccesoDatos.csproj",
+        "projectName": "Capa_3_AccesoDatos",
+        "projectPath": "C:\\Users\\Steven\\Desktop\\ProyectoCentroIdiomas\\CentroIdiomas\\Capa_3_AccesoDatos\\Capa_3_AccesoDatos.csproj",
+        "packagesPath": "C:\\Users\\Steven\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Steven\\Desktop\\ProyectoCentroIdiomas\\CentroIdiomas\\Capa_3_AccesoDatos\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Steven\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Users\\Steven\\Desktop\\ProyectoCentroIdiomas\\CentroIdiomas\\Capa_4_Entidades\\Capa_4_Entidades.csproj": {
+                "projectPath": "C:\\Users\\Steven\\Desktop\\ProyectoCentroIdiomas\\CentroIdiomas\\Capa_4_Entidades\\Capa_4_Entidades.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\Steven\\Desktop\\ProyectoCentroIdiomas\\CentroIdiomas\\Capa_4_Entidades\\Capa_4_Entidades.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Steven\\Desktop\\ProyectoCentroIdiomas\\CentroIdiomas\\Capa_4_Entidades\\Capa_4_Entidades.csproj",
+        "projectName": "Capa_4_Entidades",
+        "projectPath": "C:\\Users\\Steven\\Desktop\\ProyectoCentroIdiomas\\CentroIdiomas\\Capa_4_Entidades\\Capa_4_Entidades.csproj",
+        "packagesPath": "C:\\Users\\Steven\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Steven\\Desktop\\ProyectoCentroIdiomas\\CentroIdiomas\\Capa_4_Entidades\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Steven\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

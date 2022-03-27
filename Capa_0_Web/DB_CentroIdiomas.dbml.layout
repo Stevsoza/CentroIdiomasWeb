@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 17.875" name="DB_CentroIdiomas">
+  <DataContextMoniker Name="/DB_CentroIdiomasDataContext" />
+  <nestedChildShapes>
+    <classShape Id="10b79f8e-bab8-4d38-b96c-2f722e15e4df" absoluteBounds="3.5, 2.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DB_CentroIdiomasDataContext/CLASES" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bb652bea-a333-4c5d-a7c4-06885adae78e" absoluteBounds="3.515, 3.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="93d2df75-c5a4-4e5b-8f63-413380f80c98" absoluteBounds="1.5, 12.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DB_CentroIdiomasDataContext/PROGRAMA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e12f8ba8-989d-4b45-b914-1ccb61d5238f" absoluteBounds="1.5150000000000001, 12.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ab4e94bc-2645-46d3-951f-4116a2e0937b" absoluteBounds="0.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DB_CentroIdiomasDataContext/CURSOS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f9ce84e6-922b-4285-8bfb-5fa0777655a6" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f663fd3f-4194-4f84-b125-be24cbaa23db" absoluteBounds="3.5, 8.5, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/DB_CentroIdiomasDataContext/CURSOS_ESTUDIANTE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a85abfd0-d397-4eb9-9f80-54c10b44e932" absoluteBounds="3.515, 8.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="91090cf1-b9c4-4f93-bf1d-075437a159fd" absoluteBounds="0.75, 5.375, 2, 2.7324039713541675">
+      <DataClassMoniker Name="/DB_CentroIdiomasDataContext/ESTUDIANTES" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ea84c7b0-4be1-4f05-91dd-0ca5a1f181fd" absoluteBounds="0.765, 5.835, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f616e6cd-e9b8-4b24-82e7-5eb0442305a9" absoluteBounds="6.75, 0.75, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/DB_CentroIdiomasDataContext/FERIADOS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f6829641-ab0a-41d9-b713-9097d7859e60" absoluteBounds="6.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f00ff052-9e47-4f35-b07e-842c69615683" absoluteBounds="3.5, 6, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DB_CentroIdiomasDataContext/LOGINS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2651a578-0d4c-4c6d-89ac-ee8dc66daabe" absoluteBounds="3.515, 6.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e323f449-e7f1-4ff0-b734-921aeccf1cbc" absoluteBounds="6.5, 5.375, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/DB_CentroIdiomasDataContext/MATRICULA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7692d85e-012b-422f-99d6-408933692cc1" absoluteBounds="6.515, 5.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d472ba57-8dff-4cb8-a015-849094b54093" absoluteBounds="0.75, 14.75, 2, 2.9247054036458309">
+      <DataClassMoniker Name="/DB_CentroIdiomasDataContext/PROFESORES" />
+      <nestedChildShapes>
+        <elementListCompartment Id="474a8c16-6673-4ffe-aa41-9b2518d27003" absoluteBounds="0.765, 15.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.6874995); (4.5 : 1.6874995); (4.5 : 2.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DB_CentroIdiomasDataContext/CURSOS/CURSOS_CLASES" />
+      <nodes>
+        <classShapeMoniker Id="ab4e94bc-2645-46d3-951f-4116a2e0937b" />
+        <classShapeMoniker Id="10b79f8e-bab8-4d38-b96c-2f722e15e4df" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.1250025 : 12.125); (3.1250025 : 2.32775208723958); (2.75 : 2.32775208723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DB_CentroIdiomasDataContext/PROGRAMA/PROGRAMA_CURSOS" />
+      <nodes>
+        <classShapeMoniker Id="93d2df75-c5a4-4e5b-8f63-413380f80c98" />
+        <classShapeMoniker Id="ab4e94bc-2645-46d3-951f-4116a2e0937b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.8439602129407); (3.06607693490112 : 3.16003714784183 : JumpStart); (3.18392806509888 : 3.27788827803958 : JumpEnd); (3.3125 : 3.4064602129407); (3.3125 : 9.67390055338542); (3.5 : 9.67390055338542)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DB_CentroIdiomasDataContext/CURSOS/CURSOS_CURSOS_ESTUDIANTE" />
+      <nodes>
+        <classShapeMoniker Id="ab4e94bc-2645-46d3-951f-4116a2e0937b" />
+        <classShapeMoniker Id="f663fd3f-4194-4f84-b125-be24cbaa23db" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.43807592307692); (2.9375 : 5); (2.9375 : 5.34453713601763); (3.06607693490112 : 5.21596020111651 : JumpStart); (3.18392806509888 : 5.09810907091875 : JumpEnd); (3.25357443490112 : 5.02846270111651 : JumpStart); (3.37142556509888 : 4.91061157091875 : JumpEnd); (3.50153746153846 : 4.78049967447917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DB_CentroIdiomasDataContext/ESTUDIANTES/ESTUDIANTES_CLASES" />
+      <nodes>
+        <classShapeMoniker Id="91090cf1-b9c4-4f93-bf1d-075437a159fd" />
+        <classShapeMoniker Id="10b79f8e-bab8-4d38-b96c-2f722e15e4df" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 8.10740397135417); (1.75 : 9.05569777669271); (3.04166916666667 : 9.05569777669271 : JumpStart); (3.39583333333333 : 9.05569777669271 : JumpEnd); (3.5 : 9.05569777669271)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DB_CentroIdiomasDataContext/ESTUDIANTES/ESTUDIANTES_CURSOS_ESTUDIANTE" />
+      <nodes>
+        <classShapeMoniker Id="91090cf1-b9c4-4f93-bf1d-075437a159fd" />
+        <classShapeMoniker Id="f663fd3f-4194-4f84-b125-be24cbaa23db" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.69314697265625); (3.04166916666667 : 6.69314697265625 : JumpStart); (3.39583333333333 : 6.69314697265625 : JumpEnd); (3.5 : 6.69314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DB_CentroIdiomasDataContext/ESTUDIANTES/ESTUDIANTES_LOGINS" />
+      <nodes>
+        <classShapeMoniker Id="91090cf1-b9c4-4f93-bf1d-075437a159fd" />
+        <classShapeMoniker Id="f00ff052-9e47-4f35-b07e-842c69615683" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.6819482421875); (3.04166916666667 : 7.6819482421875 : JumpStart); (3.39583333333333 : 7.6819482421875 : JumpEnd); (6.5 : 7.6819482421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DB_CentroIdiomasDataContext/ESTUDIANTES/ESTUDIANTES_MATRICULA" />
+      <nodes>
+        <classShapeMoniker Id="91090cf1-b9c4-4f93-bf1d-075437a159fd" />
+        <classShapeMoniker Id="e323f449-e7f1-4ff0-b734-921aeccf1cbc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.47637854361979); (3.04166916666667 : 2.47637854361979 : JumpStart); (3.20833583333333 : 2.47637854361979 : JumpEnd); (4.41666666666667 : 2.47637854361979 : JumpStart); (4.58333333333333 : 2.47637854361979 : JumpEnd); (6.59375 : 2.47637854361979); (6.59375 : 5.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DB_CentroIdiomasDataContext/CURSOS/CURSOS_MATRICULA" />
+      <nodes>
+        <classShapeMoniker Id="ab4e94bc-2645-46d3-951f-4116a2e0937b" />
+        <classShapeMoniker Id="e323f449-e7f1-4ff0-b734-921aeccf1cbc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 16.2123527018229); (4.5 : 16.2123527018229); (4.5 : 11.0978011067708); (3.25 : 11.0978011067708); (3.25 : 5.15549967447917); (4.53202073076923 : 5.15549967447917); (4.53202073076923 : 4.78049967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DB_CentroIdiomasDataContext/PROFESORES/PROFESORES_CLASES" />
+      <nodes>
+        <classShapeMoniker Id="d472ba57-8dff-4cb8-a015-849094b54093" />
+        <classShapeMoniker Id="10b79f8e-bab8-4d38-b96c-2f722e15e4df" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

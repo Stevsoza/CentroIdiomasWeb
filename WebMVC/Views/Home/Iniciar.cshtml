@@ -1,0 +1,177 @@
+﻿@model Estudiante
+@{
+    ViewData["Title"] = "Iniciar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container my-5 rounded-3 shadow bg-light">
+    <div class="row p-lg-5 p-sm-3 p-2">
+        <div class="col-sm my-2 form-group">
+            <input class="form-control p-3 text-center" value="Id: @Html.DisplayFor(m => m.Id_estudiante)" readonly />
+        </div>
+        <div class="col-sm my-2">
+            <input class="form-control p-3 text-center" value="Cursos: @Html.DisplayFor(m => m.Cursos_matriculados)" readonly />
+        </div>
+        <div class="col-sm my-2">
+            <input class="form-control p-3 text-center" value="Nombre: @Html.DisplayFor(m => m.Nombre)" readonly />
+        </div>
+    </div>
+</div>
+<div class="container p-3 rounded-3 shadow bg-light mb-5">
+    <div class="m-lg-5">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="DatosUsuario-tab" data-toggle="tab" href="#DatosUsuario" role="tab" aria-controls="DatosUsuario" aria-selected="true">Datos Usuario</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="CursosEstudiante-tab" data-toggle="tab" href="#CursosEstudiante" role="tab" aria-controls="CursosEstudiante" aria-selected="false">Cursos Estudiante</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " id="MatricularCurso-tab" data-toggle="tab" href="#MatricularCurso" role="tab" aria-controls="MatricularCurso" aria-selected="false">Matricular Curso</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="Clases-tab" data-toggle="tab" href="#Clases" role="tab" aria-controls="Clases" aria-selected="false">Clases</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="DatosUsuario" role="tabpanel" aria-labelledby="DatosUsuario-tab">
+                <div class="row m-5">
+                    <div class="col-md">
+                        <div class="p-2 form-group">
+                            <label asp-for="Nombre"></label>
+                            <label class="form-control">@Html.DisplayFor(m => m.Nombre)</label>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="p-2 form-group">
+                            <label asp-for="P_apellido"></label>
+                            <label class="form-control">@Html.DisplayFor(m => m.P_apellido)</label>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="p-2 form-group">
+                            <label asp-for="S_Apellido"></label>
+                            <label class="form-control">@Html.DisplayFor(m => m.S_Apellido)</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-5">
+                    <div class="col-md">
+                        <div class="p-2 form-group">
+                            <label asp-for="Edad"></label>
+                            <label class="form-control">@Html.DisplayFor(m => m.Edad)</label>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="p-2 form-group">
+                            <label asp-for="Email"></label>
+                            <label class="form-control">@Html.DisplayFor(m => m.Email)</label>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="p-2 form-group">
+                            <label asp-for="Telefono"></label>
+                            <label class="form-control">@Html.DisplayFor(m => m.Telefono)</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="CursosEstudiante" role="tabpanel" aria-labelledby="CursosEstudiante-tab">
+                <div class="row m-lg-5 mx-sm-0 my-sm-3">
+                    <div class="col-lg-12 col-md">
+                        <div class="row">
+                            @await Html.PartialAsync("Cursos_estudiante", ViewData["Cursos"])
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="MatricularCurso" role="tabpanel" aria-labelledby="MatricularCurso-tab">
+                <div class="row m-lg-5 mx-sm-0 my-sm-3">
+                    <div class="col-xl-6 col-md-12 mx-auto">
+                        <div class="row my-4">
+                            <div class="col text-center">
+                                <p>Seleccione Programa</p>
+                            </div>
+                            <div class="col">
+                                <form method="post" asp-controller="Home" asp-action="BuscarCurso" class="d-flex flex-row">
+                                    @await Html.PartialAsync("BuscarPrograma", ViewData["Programa"])
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col bg-secondary rounded px-0" style="min-height: 100px">
+                                <div class="card-header bg-gradient text-white">Curso a Matricular</div>
+                                @await Html.PartialAsync("Curso_matricular", ViewData["Curs_mat"])
+                            </div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col text-center">
+                                <p>Seleccione Intensidad</p>
+                            </div>
+                            <div>
+                                <select ID="intensidad" class="form-control" disabled>
+                                    <option>Seleccion intensidad</option>
+                                    <option>Bajo</option>
+                                    <option>Medio</option>
+                                    <option>Alto</option>
+                                    <option>Intensivo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col text-center">
+                                <p>Si matricula hoy la fecha de finalización sería:</p>
+                            </div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col">
+                                <label ID="lblFecha" class="form-control text-center">fecha</label>
+                            </div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col d-flex flex-column">
+                                <button ID="btnMatricular" class="btn btn-secondary mx-auto disabled" Enabled="False" disabled>Matricular</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4 mt-4">
+                    <div class="col d-flex justify-content-end">
+                        <button ID="btnDeudas" type="button" class="btn btn-secondary mx-auto disabled" Enabled="False" disabled>PagarDeudas</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="Clases" role="tabpanel" aria-labelledby="Clases-tab">
+                <div class="row m-lg-5 m-sm-1">
+                    <div class="col-lg-12 col-md">
+                        <asp:GridView ID="grdClases" runat="server" class="table table-secondary table-bordered table-condensed table-responsive bdr" AllowPaging="true" PageSize="5" EmptyDataText="No Existen Registros debe crear una Clase" AutoGenerateColumns="False">
+                            <Columns>
+                                <asp:TemplateField>
+                                    <ItemTemplate>
+                                        <asp:LinkButton class="btn btn-secondary" runat="server" ID="btnEliminarClase" Text="Cancelar" CommandArgument='<%# Eval("ID_CLASE").ToString() %>' OnCommand="btnEliminarClase_Command" />
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:BoundField DataField="ID_CLASE" HeaderText="Id Clase" />
+                                <asp:BoundField DataField="ID_CURSO" HeaderText="Id Curso" />
+                                <asp:BoundField DataField="ID_PROFESOR" HeaderText="Id Profesor" />
+                                <asp:BoundField DataField="NOMBRE_CURSO" HeaderText="Nombre Curso" />
+                                <asp:BoundField DataField="INICIO" HeaderText="Inicio" />
+                                <asp:BoundField DataField="FINAL" HeaderText="Final" />
+                            </Columns>
+                        </asp:GridView>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+        <script src="~/js/IdiomasJscript.js"></script>
+    }
+}
+
+

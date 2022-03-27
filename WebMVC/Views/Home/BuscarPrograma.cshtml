@@ -1,0 +1,18 @@
+﻿@model Programa
+
+@{
+    ViewData["Title"] = "Buscar Programa";
+}
+<select id="programa" asp-for="Idioma" asp-items="@ViewBag.Idiomas" class="form-control">
+    <option>Seleccione una opcion</option>
+</select>
+<span asp-validation-for="Idioma" class="text-danger"></span>
+<input type="submit" value="Enviar" class="btn btn-dark mx-1" />
+
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+        <script src="~/js/IdiomasJscript.js"></script>
+    }
+}

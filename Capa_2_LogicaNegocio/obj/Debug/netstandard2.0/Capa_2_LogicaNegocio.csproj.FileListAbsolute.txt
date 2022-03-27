@@ -1,0 +1,15 @@
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_2_LogicaNegocio\bin\Debug\netstandard2.0\Capa_2_LogicaNegocio.deps.json
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_2_LogicaNegocio\bin\Debug\netstandard2.0\Capa_2_LogicaNegocio.dll
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_2_LogicaNegocio\bin\Debug\netstandard2.0\Capa_2_LogicaNegocio.pdb
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_2_LogicaNegocio\bin\Debug\netstandard2.0\Capa_3_AccesoDatos.dll
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_2_LogicaNegocio\bin\Debug\netstandard2.0\Capa_4_Entidades.dll
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_2_LogicaNegocio\bin\Debug\netstandard2.0\Capa_3_AccesoDatos.pdb
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_2_LogicaNegocio\bin\Debug\netstandard2.0\Capa_4_Entidades.pdb
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_2_LogicaNegocio\obj\Debug\netstandard2.0\Capa_2_LogicaNegocio.csproj.AssemblyReference.cache
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_2_LogicaNegocio\obj\Debug\netstandard2.0\Capa_2_LogicaNegocio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_2_LogicaNegocio\obj\Debug\netstandard2.0\Capa_2_LogicaNegocio.AssemblyInfoInputs.cache
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_2_LogicaNegocio\obj\Debug\netstandard2.0\Capa_2_LogicaNegocio.AssemblyInfo.cs
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_2_LogicaNegocio\obj\Debug\netstandard2.0\Capa_2_LogicaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_2_LogicaNegocio\obj\Debug\netstandard2.0\Capa_2_LogicaNegocio.csproj.CopyComplete
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_2_LogicaNegocio\obj\Debug\netstandard2.0\Capa_2_LogicaNegocio.dll
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_2_LogicaNegocio\obj\Debug\netstandard2.0\Capa_2_LogicaNegocio.pdb

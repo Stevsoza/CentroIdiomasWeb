@@ -1,0 +1,57 @@
+﻿@model Estudiante
+@{ 
+    ViewData["Title"] = "Datos Estudiante";
+}
+
+<div class="col">
+    <div class="form-group">
+        <label class="control-label">Nombre</label>
+        <div>
+            <input asp-for="Nombre" class="form-control input-lg" />
+        </div>
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Primer Apellido</label>
+        <div>
+            <input asp-for="P_apellido" class="form-control input-lg" />
+        </div>
+        <span asp-validation-for="P_apellido" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Segundo Apellido</label>
+        <div>
+            <input asp-for="S_Apellido" class="form-control input-lg" />
+        </div>
+        <span asp-validation-for="S_Apellido" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Telefóno</label>
+        <div>
+            <input asp-for="Telefono" class="form-control input-lg" />
+        </div>
+        <span asp-validation-for="Telefono" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label">E-Mail</label>
+        <div>
+            <input asp-for="Email" class="form-control input-lg" />
+        </div>
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Edad</label>
+        <div>
+            <input asp-for="Edad" class="form-control input-lg" />
+        </div>
+        <span asp-validation-for="Edad" class="text-danger"></span>
+    </div>
+    <div class="form-group m-3">
+        <div>
+            <Button type="submit" class="btn btn-dark">
+                Enviar Registro
+            </Button>
+        </div>
+    </div>
+</div>

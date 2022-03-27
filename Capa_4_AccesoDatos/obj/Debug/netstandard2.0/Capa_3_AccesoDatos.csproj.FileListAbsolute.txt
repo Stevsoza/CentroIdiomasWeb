@@ -1,0 +1,13 @@
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_4_AccesoDatos\bin\Debug\netstandard2.0\Capa_3_AccesoDatos.deps.json
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_4_AccesoDatos\bin\Debug\netstandard2.0\Capa_3_AccesoDatos.dll
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_4_AccesoDatos\bin\Debug\netstandard2.0\Capa_3_AccesoDatos.pdb
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_4_AccesoDatos\bin\Debug\netstandard2.0\Capa_4_Entidades.dll
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_4_AccesoDatos\bin\Debug\netstandard2.0\Capa_4_Entidades.pdb
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_4_AccesoDatos\obj\Debug\netstandard2.0\Capa_3_AccesoDatos.csproj.AssemblyReference.cache
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_4_AccesoDatos\obj\Debug\netstandard2.0\Capa_3_AccesoDatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_4_AccesoDatos\obj\Debug\netstandard2.0\Capa_3_AccesoDatos.AssemblyInfoInputs.cache
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_4_AccesoDatos\obj\Debug\netstandard2.0\Capa_3_AccesoDatos.AssemblyInfo.cs
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_4_AccesoDatos\obj\Debug\netstandard2.0\Capa_3_AccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_4_AccesoDatos\obj\Debug\netstandard2.0\Capa_3_AccesoDatos.csproj.CopyComplete
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_4_AccesoDatos\obj\Debug\netstandard2.0\Capa_3_AccesoDatos.dll
+C:\Users\Steven\Desktop\ProyectoCentroIdiomas\CentroIdiomas\Capa_4_AccesoDatos\obj\Debug\netstandard2.0\Capa_3_AccesoDatos.pdb

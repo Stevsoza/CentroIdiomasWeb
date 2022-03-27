@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CENTRO_IDIOMAS" Class="DB_CentroIdiomasDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=STEVSOZA;Initial Catalog=CENTRO_IDIOMAS;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="CENTRO_IDIOMASConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CLASES" Member="CLASES">
+    <Type Name="CLASES">
+      <Column Name="ID_CLASE" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_ESTUDIANTE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_PROFESOR" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_CURSO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="INICIO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FINAL" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="BORRADO_E" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CURSOS_CLASES" Member="CURSOS" ThisKey="ID_CURSO" OtherKey="ID_CURSO" Type="CURSOS" IsForeignKey="true" />
+      <Association Name="ESTUDIANTES_CLASES" Member="ESTUDIANTES" ThisKey="ID_ESTUDIANTE" OtherKey="ID_ESTUDIANTE" Type="ESTUDIANTES" IsForeignKey="true" />
+      <Association Name="PROFESORES_CLASES" Member="PROFESORES" ThisKey="ID_PROFESOR" OtherKey="ID_PROFESOR" Type="PROFESORES" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PROGRAMA" Member="PROGRAMA">
+    <Type Name="PROGRAMA">
+      <Column Name="ID_PROGRAMA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDIOMA" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CURSOS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BORRADO_E" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="PROGRAMA_CURSOS" Member="CURSOS1" ThisKey="ID_PROGRAMA" OtherKey="ID_PROGRAMA" Type="CURSOS" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CURSOS" Member="CURSOS">
+    <Type Name="CURSOS">
+      <Column Name="ID_CURSO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_PROGRAMA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NOMBRE_CURSO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="REQUISITO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HORAS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="COSTO" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="BORRADO_E" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CURSOS_CLASES" Member="CLASES" ThisKey="ID_CURSO" OtherKey="ID_CURSO" Type="CLASES" />
+      <Association Name="CURSOS_CURSOS_ESTUDIANTE" Member="CURSOS_ESTUDIANTE" ThisKey="ID_CURSO" OtherKey="ID_CURSO" Type="CURSOS_ESTUDIANTE" />
+      <Association Name="CURSOS_MATRICULA" Member="MATRICULA" ThisKey="ID_CURSO" OtherKey="ID_CURSO" Type="MATRICULA" />
+      <Association Name="PROGRAMA_CURSOS" Member="PROGRAMA" ThisKey="ID_PROGRAMA" OtherKey="ID_PROGRAMA" Type="PROGRAMA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CURSOS_ESTUDIANTE" Member="CURSOS_ESTUDIANTE">
+    <Type Name="CURSOS_ESTUDIANTE">
+      <Column Name="ID_CURSO" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_ESTUDIANTE" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NOMBRE_CURSO" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="FECHA_INICIO" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="FECHA_FINAL" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ESTADO" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="HORAS_SINC_RES" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BORRADO_E" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="CURSOS_CURSOS_ESTUDIANTE" Member="CURSOS" ThisKey="ID_CURSO" OtherKey="ID_CURSO" Type="CURSOS" IsForeignKey="true" />
+      <Association Name="ESTUDIANTES_CURSOS_ESTUDIANTE" Member="ESTUDIANTES" ThisKey="ID_ESTUDIANTE" OtherKey="ID_ESTUDIANTE" Type="ESTUDIANTES" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESTUDIANTES" Member="ESTUDIANTES">
+    <Type Name="ESTUDIANTES">
+      <Column Name="ID_ESTUDIANTE" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="P_APELLIDO" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="S_APELLIDO" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="EDAD" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TELEFONO" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DEUDA" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CURSOS_MATRICULADOS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BORRADO_E" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="ESTUDIANTES_CLASES" Member="CLASES" ThisKey="ID_ESTUDIANTE" OtherKey="ID_ESTUDIANTE" Type="CLASES" />
+      <Association Name="ESTUDIANTES_CURSOS_ESTUDIANTE" Member="CURSOS_ESTUDIANTE" ThisKey="ID_ESTUDIANTE" OtherKey="ID_ESTUDIANTE" Type="CURSOS_ESTUDIANTE" />
+      <Association Name="ESTUDIANTES_LOGINS" Member="LOGINS" ThisKey="ID_ESTUDIANTE" OtherKey="ID_ESTUDIANTE" Type="LOGINS" />
+      <Association Name="ESTUDIANTES_MATRICULA" Member="MATRICULA" ThisKey="ID_ESTUDIANTE" OtherKey="ID_ESTUDIANTE" Type="MATRICULA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FERIADOS" Member="FERIADOS">
+    <Type Name="FERIADOS">
+      <Column Name="FECHA" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ANIO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOGINS" Member="LOGINS">
+    <Type Name="LOGINS">
+      <Column Name="USUARIO" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_ESTUDIANTE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CONTRASENA" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="ESTUDIANTES_LOGINS" Member="ESTUDIANTES" ThisKey="ID_ESTUDIANTE" OtherKey="ID_ESTUDIANTE" Type="ESTUDIANTES" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MATRICULA" Member="MATRICULA">
+    <Type Name="MATRICULA">
+      <Column Name="ID_MATRICULA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_ESTUDIANTE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_CURSO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDIOMA" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="NIVEL_INTENSIDAD" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="COSTO" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="CANCELADO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="BORRADO_E" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="ESTUDIANTES_MATRICULA" Member="ESTUDIANTES" ThisKey="ID_ESTUDIANTE" OtherKey="ID_ESTUDIANTE" Type="ESTUDIANTES" IsForeignKey="true" />
+      <Association Name="CURSOS_MATRICULA" Member="CURSOS" ThisKey="ID_CURSO" OtherKey="ID_CURSO" Type="CURSOS" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PROFESORES" Member="PROFESORES">
+    <Type Name="PROFESORES">
+      <Column Name="ID_PROFESOR" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="P_APELLIDO" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="S_APELLIDO" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="EDAD" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TELEFONO" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IDIOMA" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="HORA_ENTRADA" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="HORA_SALIDA" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="BORRADO_E" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="PROFESORES_CLASES" Member="CLASES" ThisKey="ID_PROFESOR" OtherKey="ID_PROFESOR" Type="CLASES" />
+    </Type>
+  </Table>
+  <Function Name="dbo.CURSO_IDIOMA" Method="CURSO_IDIOMA">
+    <Parameter Name="id_curso" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idioma" Type="System.String" DbType="VarChar(20)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CURSO_NEXT" Method="CURSO_NEXT">
+    <Parameter Name="id_estudiante" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idioma" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="msj" Type="System.String" DbType="VarChar(100)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

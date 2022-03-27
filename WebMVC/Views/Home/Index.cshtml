@@ -1,0 +1,86 @@
+﻿@model Login
+@{
+
+    ViewData["Title"] = "Home Page";
+}
+@Html.Raw(TempData["msg"])
+<form id="form1" class="d-flex flex-column min-vh-100" method="Post" asp-action="Inicio">
+    <div class="container">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <figure class="figure d-flex flex-column justify-content-center w-25 mx-auto">
+            <img src="../img/idioma.png" class="figure-img img-fluid rounded" alt="..." />
+            <figcaption class="invisible figure-caption">A caption for the above image.</figcaption>
+        </figure>
+
+        <div class="row justify-content-center">
+            <div class="col-sm-5">
+                <div class="form-group mb-3">
+                    <label asp-for="Usuario"></label>
+                    <input asp-for="Usuario" class="form-control" />
+                    <span asp-validation-for="Usuario" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-5">
+                <div class="form-group mb-3">
+                    <label asp-for="Contrasena"></label>
+                    <input asp-for="Contrasena" type="password" class="form-control" />
+                    <span asp-validation-for="Contrasena" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-5">
+                <div class="d-flex justify-content-center mt-5">
+                    <input type="submit" class="btn btn-dark mx-1" value="Iniciar Sesion" />
+                    <button type="button" class="btn btn-dark mx-1" data-toggle="modal" data-target="#ModalLoginForm">
+                        Registrarse
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="container">
+    <!-- Modal HTML Markup -->
+    <div id="ModalLoginForm" class="modal fade">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body m-5">
+                    <h1>Registrese</h1>
+                    <form id="form2" class="row" method="POST" asp-action="Registro">
+                        <input type="hidden" name="_token" value="" />
+                        <div class="col">
+                            <div class="form-group">
+                                <label class="control-label">Usuario</label>
+                                <div>
+                                    <input asp-for="Usuario" class="form-control input-lg" />
+                                </div>
+                                <span asp-validation-for="Usuario" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Contraseña</label>
+                                <div>
+                                    <input asp-for="Contrasena" class="form-control input-lg" />
+                                </div>
+                                <span asp-validation-for="Contrasena" class="text-danger"></span>
+                            </div>
+                        </div>
+                        @await Html.PartialAsync("Datos_Login")
+                    </form>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+</div>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+}
